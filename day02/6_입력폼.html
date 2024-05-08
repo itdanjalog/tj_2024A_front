@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+
+  <!--
+    <textarea> : 긴글 입력 창 
+      1. 속성 
+        1. rows : 가로 방향 의 텍스트 개수 
+        2. cols : 세로 방향 의 텍스트 개수 
+
+    <select> , <option> : 목록상자 , 목록상자의 항목(아이템)
+    
+    <input />  : 짧은 입력 창 
+      1. 속성 정리
+        1. type
+          type = "text"           : 문자입력,기본값
+          type = "password"       : 패스워드입력(가려진 문자)
+          type = "email"          : 이메일 입력( @ 포함된 텍스트 )
+          type = "file"           : 첨부파일 입력
+          type = "color"          : 색상 입력 
+          type = "date"           : 날짜 입력
+          type = "datetime-local"  : 날짜시간 입력
+          type = "time"  : 시간     type ="month" : 월     type ="week" : 주 
+          type = "range"           : 범위스크롤
+          type = "number"          : 숫자 입력 
+          type = "radio"          : 단일선택 ( name속성 동일 ) 
+          type = "checkbox"       : 복수선택
+            - checked 속성  : 체크된 상태 
+
+          type = "button"           : 버튼 (추후에 JS와 이벤트 버튼으로 사용됨)
+          type = "submit"           : form전송버튼( 추후에 백엔드서버 에게 전송할 예정 )
+          type = "reset"            : 같은 form 안에 있는 모든 input 초기화/리셋 
+        2. name : input 마크업의 식별 이름 
+        3. value : input 에 입력된 데이터 
+        4. placeholder : 입력전 가이드라인 텍스트
+        5. readonly : 읽기모드( 입력불가 )
+        6. disabled : 사용금지 
+        7. maxlength : 입력텍스트 최대길이 <->  minlength
+        8. autofocus : 자동 포커스( 마우스 커버 깜박임 )
+
+  -->
+  
+  <h1> 입력 폼 </h1>
+
+  <form> <!-- 폼 : 1.전송기능(백엔드필요) 2.입력마크업 묶음 -->
+    
+    아이디 : <input type="text" value="유재석" readonly />              <br />
+    비밀번호 : <input type="password" placeholder="비밀번호" maxlength="5" autofocus />        <br />
+    이메일 : <input type="email" disabled />             <br />
+    프로필사진 : <input type="file" />          <br />
+    
+    색상 : <input type="color" />               <br />
+    날짜 : <input type="date" />                <br />  
+    날짜/시간 : <input type="datetime-local" /> <br />
+    시간 : <input type="time" />                <br />
+    월 : <input type="month" />                 <br />
+    주 : <input type="week" />                  <br />
+    범위스크롤 : <input type="range" />          <br />
+    숫자 : <input type="number" />               <br />
+    
+    <p> 원형 체크 버튼[단일선택 = name속성의 이름이 동일하면 단일선택] </p>
+    <input type="radio" name="동의여부"   /> 예
+    <input type="radio" name="동의여부"   /> 아니요
+
+    <p> 네모 체크 버튼[복수선택 = name속성의 이름이 동일해도 복수선택]</p>
+    <input type="checkbox" name="가입경로" /> 뉴스
+    <input type="checkbox" name="가입경로" /> 지인추천
+    <input type="checkbox" name="가입경로" /> 검색
+
+    <p> 버튼 들 </p>
+    <input type="button" value="이벤트버튼" />
+    <input type="submit" value="폼전송버튼" />
+    <input type="reset" value="입력초기화버튼" />  <br />
+
+    <textarea rows="5" cols="7"></textarea> <br />
+
+    <select>
+      <option> 네이버 </option>
+      <option> 카카오 </option>
+      <option> 네이트 </option>
+    </select>
+
+
+  </form>
+
+</body>
+</html>
