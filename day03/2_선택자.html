@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' 
+    href='2_선택자.css'>
+  
+  <script src='main.js'></script>
+</head>
+<body>
+  <!--
+
+    어디에 { 무엇을 : 어떻게; }
+    선택자 { 속성명 : 값; }
+
+    CSS 선택자란 ? 
+      1. 꾸미기 대상(html마크업) 선택
+      2. 종류
+        1. *              : 공통 (와일드카드) : 모든 곳에 적용
+        2. 마크업명       : 동일한 마크업명 이면 적용 
+        3. class 속성     : 동일한 class속성명 이면 적용 
+        4. id 속성        : 동일한 id속성명 이면 적용
+      
+      3. 동일한 속성이 적용될때 우선순위
+        1. CSS 코드 작성순 ( 아래에 있는 코드 우선 )
+        2. 선택자 적용 우선순위 
+          id > class > 마크업 > * 
+  -->
+
+  <p> 유재석 </p>
+  <p> 강호동 </p>                 <!-- red -->
+  <h4> 신동엽 </h4>               <!-- red , yellow  -->
+  <p class="구역1" > 김희철 </p>   <!-- red , blue  -->
+  <p class="구역1" > 김희철 </p>   
+  <p id="구역2"> 서장훈 </p>      <!-- red , green  -->
+  <h4 class="구역1"> 신동엽 </h4> <!-- red , yellow , blue  -->
+
+</body>
+</html>

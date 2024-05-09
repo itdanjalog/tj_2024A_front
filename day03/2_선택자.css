@@ -1,0 +1,13 @@
+/* css 주석 */
+
+/* 1. *선택자 */
+*{ color: red ;}
+
+/* 2. 마크업명 */
+h4{ color: yellow; }
+
+/* 3. class속성 */
+.구역1{ color: blue; }
+
+/* 4. id 속성 */
+#구역2{ color: green;}
