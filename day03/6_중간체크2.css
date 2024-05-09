@@ -1,0 +1,33 @@
+/* 글머리 제거 */
+li{ list-style-type: none;}
+/* 기본값 여백 제거 */
+*{ padding: 0px; margin: 0px; }
+
+/* 1. 제품 전체구역 */
+.product{
+  border: 1px solid #eeeeee;
+  width: 400px;  margin: 20px;
+}
+
+/* 2. 제품 이미지 */
+.pImg{  width: 400px; }
+
+/* 3. 제품명 */
+.pTitle{
+  font-size: 20px;
+  font-weight: bold; 
+  border-top: 1px solid #eeeeee;
+  padding: 20px 10px ;
+}
+/* 4. 가격 */
+.pPrice{  padding: 10px; font-weight: bold; }
+
+/* 5. 내용 */
+.pContents{ padding: 10px; line-height: 160%; }
+
+/* 6. 리뷰 평점 */
+.pReview{ padding: 10px; }
+.pReview > .orange { 
+  color: orange; font-weight: 500; 
+}
+
