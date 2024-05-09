@@ -33,3 +33,21 @@
   line-height: 160%;    /* 줄간격 */
 }
 
+#writer{
+  /* 텍스트/컨텐츠 가로 정렬 : left , right , center */
+  text-align: center;
+
+  /* 텍스트 선긋기 underline:밑줄 overline:윗줄 line-through:취소선  */
+  text-decoration: underline overline line-through ;
+
+  /* 텍스트 그림자 : x축 y축 흐림정도 색상 */
+  text-shadow: 0px 0px 10px red;
+
+  /* 색상 : 1.색상이름 2.헥사코드[16진수] 3.RGB색상[ 0~255 사이 3칸 ] */
+  color: blue;
+  color: #0000FF;
+  color: rgb(0, 0, 255);
+}
+
+
+
