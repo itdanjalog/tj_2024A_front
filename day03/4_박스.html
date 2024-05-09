@@ -38,5 +38,40 @@
     <input />
   </form>
 
+  <!--
+    div( division ) vs span : 구역/레이아웃 
+      - 모든 마크업들은 CSS 기본적으로 적용된 상태
+      - div 와 span  두 마크업은 CSS 기본값이 거의 없는 마크업
+
+      1. <div>
+          display : block                 한줄을 차지된 배치 / 사이즈 적용 가능
+          대표마크업 : div , h , p , ul , ol 등
+          
+
+      2. <span> 
+          display : inline               한줄에 포함된 배치 / 사이즈 적용 불가능
+          대표마크업 : span , a , img
+          
+          display : inline-block;        한줄에 포함된 배치 / 사이즈 적용 가능
+
+          display : none                표시 안함
+
+  -->
+
+  <div> div 1 </div>
+  <div> div 2 </div>
+  <span> span 1 </span>
+  <span> span 2 </span>
+
+  <div> 글자1 <span class="s1">s1 inline</span> 글자2</div>
+  <div> 글자1 <span class="s2">s2 block</span> 글자2</div>
+  <div> 글자1 <span class="s3">s3 inline-block</span> 글자2</div>
+  <div> 글자1 <span class="s4">s4 inline-block</span> 글자2</div>
+
+  <div> 글자1 <div class="s1">s1 inline</div> 글자2</div>
+  <div> 글자1 <div class="s2">s2 block</div> 글자2</div>
+  <div> 글자1 <div class="s3">s3 inline-block</div> 글자2</div>
+  <div> 글자1 <div class="s4">s4 inline-block</div> 글자2</div>
+
 </body>
 </html>

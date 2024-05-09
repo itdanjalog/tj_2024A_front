@@ -78,6 +78,21 @@ form > input{ width: 300px; }
 
 }
 
+.s1{
+  display: inline; /* 인라인 : span 기본값 */
+  width: 200px; height: 200px; /* 구역 크기 */
+}
+.s2{
+  display: block;
+  width: 200px; height: 200px;
+}
+.s3{
+  display: inline-block;
+  width: 200px; height: 200px;
+}
+.s4{
+  display: none;  
+}
 
 
 

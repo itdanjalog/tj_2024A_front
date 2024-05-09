@@ -1,0 +1,29 @@
+
+/* 1. 이미지 */
+.bookImg{
+  width: 300px; height: 400px; /* 이미지 크기 */
+}
+/* 2. 제목번호 */
+.titleNum{
+  color: orange;
+  font-size: 30px;
+  display: inline; /* 생략가능. */
+}
+/* 3. 내용 구역 */
+.contents{
+  background-color: beige;
+  width: 500px;
+  padding: 30px 20px; /* 안쪽 여백*/
+}
+/* 4. 글머리 제거 */
+.contents > li{ 
+  list-style-type: none ; /* 글머리 타입 : 글머리 제거 */
+} 
+/* 5. 특정 구역 색상만 변경 */
+.point{
+  color: orange; 
+  font-weight: bold;
+}
+.contents > .point{
+  
+}
