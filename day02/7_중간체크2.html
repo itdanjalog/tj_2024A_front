@@ -10,29 +10,31 @@
 </head>
 <body>
 
-  카테고리<select>
-    <option> 공지사항 </option>
-    <option> 노하우 </option>
-  </select> <br />
-  <input type="text"      placeholder="작성자"/>
-  <input type="password"  placeholder="비밀번호" />
-  <hr />
-  <input type="text" placeholder="게시물 제목 입력" />
-  <hr />
-  <textarea rows="15" cols="50" placeholder="게시물 내용 입력"></textarea><br />
-  공개선택
-  <input type="radio" name="공개선택" checked /> 공개글 <!-- checked : 체크된 상태 속성 -->
-  <input type="radio" name="공개선택" /> 비공개글 <br />
-  공유선택
-  <input type="checkbox" name="공유선택" /> 카카오톡 
-  <input type="checkbox" name="공유선택" /> 트위터
-  <input type="checkbox" name="공유선택" /> 네이버카페 <br />
-  작성일자 <input type="date" /> 작성시간 <input type="time" />
-  <hr />
-  첨부파일 <input type="file" /> <br/> <br/>
-  <input type="button" value="목록보기" />
-  <input type="submit" value="글쓰기" />
-  <input type="reset" value="다시쓰기" />
+  <form>
+    카테고리<select>
+      <option> 공지사항 </option>
+      <option> 노하우 </option>
+    </select> <br />
+    <input type="text"      placeholder="작성자"/>
+    <input type="password"  placeholder="비밀번호" />
+    <hr />
+    <input type="text" placeholder="게시물 제목 입력" />
+    <hr />
+    <textarea rows="15" cols="50" placeholder="게시물 내용 입력"></textarea><br />
+    공개선택
+    <input type="radio" name="공개선택" checked /> 공개글 <!-- checked : 체크된 상태 속성 -->
+    <input type="radio" name="공개선택" /> 비공개글 <br />
+    공유선택
+    <input type="checkbox" name="공유선택" /> 카카오톡 
+    <input type="checkbox" name="공유선택" /> 트위터
+    <input type="checkbox" name="공유선택" /> 네이버카페 <br />
+    작성일자 <input type="date" /> 작성시간 <input type="time" />
+    <hr />
+    첨부파일 <input type="file" /> <br/> <br/>
+    <input type="button" value="목록보기" />
+    <input type="submit" value="글쓰기" />
+    <input type="reset" value="다시쓰기" />
+  </form>
 
 </body>
 </html>
