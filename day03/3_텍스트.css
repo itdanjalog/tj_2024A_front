@@ -1,0 +1,35 @@
+
+/* 
+  CSS 주석 
+  어디에{ 무엇을:어떻게; }
+  어디에{ 무엇을:어떻게; 무엇을:어떻게; }
+
+  px : 픽셀 , 고정형 크기 
+
+*/
+
+.title{
+  font-family: "궁서" ; /* 글꼴 : 사용자PC에 설치된 글꼴 가능 */
+  font-size : 30px;     /* 글꼴 크기 */
+  font-style: italic;   /* 기울기 */
+  font-weight: bold;    /* 진하게 : h마크업들은 기본값 */    
+}
+
+/* ========================== 웹폰트: 눈누 [ https://noonnu.cc/ ] ===================== */
+@font-face {
+  font-family: 'TTHakgyoansimMonggeulmonggeulR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMonggeulmonggeulR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ========================== ========= ===================== */
+.content{
+   /* 웹폰트 : 설치X , 폰트제공하는 서버 제공 */
+  font-family: 'TTHakgyoansimMonggeulmonggeulR';
+  color: gold;        /* 폰트 색상 */
+  word-spacing: 10px;   /* 단어 간격 : 어간 */
+  letter-spacing: 2px;  /* 글자 간격 : 자간 */
+  line-height: 160%;    /* 줄간격 */
+}
+
