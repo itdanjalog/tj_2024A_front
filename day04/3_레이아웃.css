@@ -1,0 +1,33 @@
+*{
+  border: 2px solid red;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#wrap{
+  width: 1280px; /* 페이지 전체 사이즈 */
+  margin: 50px auto; /* 구역 가운데 정렬 */
+}
+#header{
+  background-color: beige;
+  height: 100px;
+}
+#main{
+  background-color: aqua; 
+  display: flex; /* 자식요소들의 배치 방법 */
+  flex-direction: row;   /* 가로배치  (기본값) */
+  flex-wrap: nowrap; /* 줄바꿈 안함  (기본값) */
+  justify-content: space-between;
+
+  height: 500px;
+}
+#footer{
+  background-color: black; color: white;
+  height: 100px;
+}
+#contents{  width: 900px; }
+#aside{ width: 300px; }
+
+
+
+
+
