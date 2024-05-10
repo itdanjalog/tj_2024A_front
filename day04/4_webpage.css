@@ -4,8 +4,6 @@
 *{ box-sizing: border-box; }
 /* a마크업 기본값 제거 : 밑줄제거,색상변경 */
 a{ text-decoration: none; color: black;}
-/* 확인용 */
-*{ border: 1px solid red ;}
 
 /* 1. =========================== 헤더 ================================ */
 #header{
@@ -20,27 +18,54 @@ a{ text-decoration: none; color: black;}
   justify-content: flex-end;  /* flex 요소 오른쪽 정렬 */
   margin: 10px 0px;    font-size: 10px;
 }
+
 #topMenu > li{ margin-left: 20px; } /* li 마다 왼쪽 바깥여백 */
 
 #mainMenu{
   display: flex;
   margin: 20px 0px;   font-size: 20px; font-weight: bold;
 }
+
 #mainMenu > li{ margin-left: 70px; }
 
 /*  =========================== 메인이미지 ================================ */
 #mainImg{ width: 100%; }
 
-
-
-/* 2. 본문 */
+/* 2.  =========================== 본문 =========================== */
 #content{
   width: 1280px;     margin: 30px auto;
-  background-color: aqua;     height: 500px;
+  display: flex; justify-content: space-between;
+}
+#aside{ width: 250px; }
+#aside > h3{
+  background-color: gray; color: white;
+  font-size: 20px;
+  padding: 15px;
+}
+#aside > ul > li{
+  border-bottom: 2px solid #eeeeee;
+  padding: 10px;
+} 
+#mainContent{  width: 1000px;  }
+#mainContent > h3{
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 20px; margin-bottom: 20px;
+  font-size: 20px;
+}
+#mainContent > img {
+  display: block;
+  margin: 0 auto; /*  display : inline 이면 margin: 0 auto; 적용불가능   */
 }
 
-/* 3. 푸터 */
+/* 3. =========================== 푸터 ===========================  */
 #footer{
-  background-color: black;    height: 80px;
+  background-color: #2c2a29; 
 }
 
+#footerContent{
+  width: 1280px; margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: white; 
+  padding: 30px 0px;
+}
