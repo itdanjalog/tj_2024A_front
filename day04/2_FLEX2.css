@@ -1,0 +1,18 @@
+*{ box-sizing: border-box;}
+.box{
+  background-color: black;  color: white;
+  width: 10%; /* 부모 사이즈 에서 10%만 사용.*/
+}
+.container{
+  display: flex; border: 3px solid red;
+  /* width : 생략시 100% */
+}
+
+#flexbox1{ justify-content: flex-start; } /*[기본값] 왼쪽 부터 정렬*/
+#flexbox2{ justify-content: flex-end; } /*오른쪽 부터 정렬*/
+#flexbox3{ justify-content: center; } /*가운데 정렬*/
+#flexbox4{ justify-content: space-between; } /* 양쪽 끝에 여백없이 사이 여백 균등 정렬*/
+#flexbox5{ justify-content: space-around; } /* 양쪽 끝에 여백없이 사이 여백 균등 정렬*/
+#flexbox6{ justify-content: space-evenly; } /* 양쪽 끝에 여백없이 사이 여백 균등 정렬*/
+
+
