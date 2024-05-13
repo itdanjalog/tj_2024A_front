@@ -19,8 +19,8 @@ a{ text-decoration: none; color: black;} /* a마크업의 밑줄제거,색상 �
 #header{ width: 1280px; margin: 0 auto; } /* width:가로사이즈 */
 #content{ width: 1280px; margin: 0 auto; } /* margin: 0 auto; vs  text-align: center; */
 
-/* 작용 용 : 추후에 완성시 제거 */
-/* *{ border: 2px solid red ;}  테두리 */
+/* 작업 용 : 추후에 완성시 제거 */
+/* *{ border: 2px solid red ;} 테두리 */
 
 /* ========================= 헤더 ============================= */
 #header{
@@ -87,5 +87,17 @@ a{ text-decoration: none; color: black;} /* a마크업의 밑줄제거,색상 �
 }
 
 #mainContent{
-  width: 1000px; /* 부모요소[1280px] 에서 자식요소들이 나눠서 설정*/
+  width: 1010px; /* 부모요소[1280px] 에서 자식요소들이 나눠서 설정*/
+  display: flex; justify-content: space-between;
 }
+#mainContent > #leftContent{ width: 500px; }
+#mainContent h3{ 
+  border-bottom: solid 2px black;
+  padding-bottom: 10px;
+}
+#leftContent > .board { margin: 10px 0px 50px 0px; }
+#leftContent > .board > li{
+  display: flex; justify-content: space-between; padding: 10px 0px;
+}
+
+#mainContent > #rightContent{ width: 500px; }
