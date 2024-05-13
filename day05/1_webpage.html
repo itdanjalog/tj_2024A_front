@@ -1,0 +1,75 @@
+<!DOCTYPE html>                     <!-- HTML5 버전 알림-->
+<html>                              <!-- HTML 시작 마크업 -->
+  <head>                            <!-- HTML 페이지내 설정/옵션 마크업-->
+    <meta charset='utf-8'>          <!-- HTML 파일내 문자 인코딩/번역 -->
+    <title>Page Title</title>       <!-- HTML 페이지의 제목 -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>    <!-- 반응형(디바이스=모니터크기에 따라 배율고정)-->
+    <link rel='stylesheet' type='text/css' media='screen' href='1_webpage.css'>  <!-- CSS 파일 호출 -->
+    <script src='main.js'></script> <!-- JS 파일 호출 -->
+  </head>
+  <body>                          <!-- HTML 본문 시작 -->
+    
+    <!-- 
+      <마크업 />
+      <마크업 > 컨텐츠 </마크업>
+    -->
+
+    <div id="wrap">         <!-- <div> : 주로 레이아웃/구역 만들때 사용되는 마크업 display:block-->
+       
+      <div id="header">  <!-- css선택자 : id(페이지당 단일용) vs class(페이자당 복수용)-->
+        
+        <div id="headerLeft"> 
+          <img src="img/logo.png"/>  
+        </div>
+        
+        <div id="headerRight"> 
+          <ul id="topMenu">
+            <li> 김지영(jyKim)님 | </li>
+            <li> 로그아웃 | </li>
+            <li> 정보수정 </li>
+          </ul>
+          <ul id="mainMenu" >
+            <li> <a href="#">HOME</a> </li>
+            <li> <a href="#">출석부</a> </li>
+            <li> <a href="#">작품갤러리</a> </li>
+            <li> <a href="#">게시판</a> </li>
+          </ul>
+        </div>
+
+      </div> <!-- 헤더 div end -->
+      
+      <!-- <img id="mainImg" src="img/main_bg.png" /> -->
+      <div id="mainImg" ></div>       
+      
+      <div id="content">
+        <div id="sidebar">
+          <h3> The 베이킹 </h3>
+          <p>안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.</p>
+          <input class="searchInput" type="text"/>
+          <input class="searchBtn" type="button" value="검색" />
+ 
+          <h4>베이킹 요리</h4>
+          <ul>
+            <li> 쿠키 만들기 </li>
+            <li> 빵 만들기 </li>
+            <li> 마카롱 만들기 </li>
+          </ul>
+
+          <h4>최근 댓글</h4>
+          <ul>
+            <li> 쿠키 재미있어요. </li>
+            <li> 빵 좋아요 </li>
+            <li> 마카롱 만들기 추천 </li>
+          </ul>
+        </div>
+        <div id="mainContent">
+          오른쪽
+        </div>
+      </div>
+
+      <div id="footer"> 푸터 : 신동엽 </div>
+
+    </div>
+
+  </body>                         <!-- HTML 본문 END -->
+</html>                           <!-- HTML 시작 마크업 END  -->

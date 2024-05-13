@@ -1,0 +1,91 @@
+/*
+  협업시 공통( 모든페이지 같이 적용할 css )
+    1. 웹페이지내 컨텐츠 전체 사이즈 : pc( 1000 ~ 1300 )px : 1280px
+    2. 폰트   
+    3. 색상테마
+    4. 레이아웃
+  
+  CSS 
+    선택자 { 속성명 : 값; }
+
+*/
+
+/* 기본 css 세팅 : 글꼴 , 안쪽여백 , 바깥여백 , 구역사이즈기준  */ 
+*{ font-family: "굴림";  padding: 0px; margin: 0px; box-sizing: border-box; }
+li{ list-style-type: none; }  /* 글머리 제거 */
+a{ text-decoration: none; color: black;} /* a마크업의 밑줄제거,색상 검정*/
+
+/* 레이아웃 용 */
+#header{ width: 1280px; margin: 0 auto; } /* width:가로사이즈 */
+#content{ width: 1280px; margin: 0 auto; } /* margin: 0 auto; vs  text-align: center; */
+
+/* 작용 용 : 추후에 완성시 제거 */
+/* *{ border: 2px solid red ;}  테두리 */
+
+/* ========================= 헤더 ============================= */
+#header{
+  display: flex; /* 하위 요소들의 배치 방법 */
+  justify-content: space-between; /* 양끝 여백 없이 가로 균등 정렬 */
+  align-items: center;            /* 세로 정렬 */
+  margin-top : 20px ;
+}
+#topMenu{
+  display: flex;
+  justify-content: flex-end;  /* 오른쪽 정렬 */
+}
+#mainMenu{
+  display: flex;
+  justify-content: flex-end;  /* 오른쪽 정렬 */
+}
+#mainMenu > li { /* 상위선택자 > 하위선택자 :  */
+  font-size: 20px; font-weight: bold;
+  margin-left: 100px; margin-top: 15px; /* 임의로 여백 설정  */
+}
+/*
+  이미지를 가운데 정렬하는 방법 1 : img 마크업 사용 
+    #mainImg{   display: block; margin: 0 auto; }
+
+  이미지를 가운데 정렬하는 방법 2 : div 마크업의 배경 사용 
+*/
+#mainImg{
+  width: 100%; height: 300px; margin: 30px 0px; /* 구역 사이즈 */
+  background-image: url("img/main_bg.png"); /* 구역 배경 이미지 */
+
+  /* 배경 자동 채우기 : 배경 이미지 보다 구역의 크기가 컸을때 이미지를 반복채우기  */
+  background-repeat: no-repeat; /* no-repeat : 자동채우기 안함 , repeat : (기본값)자동채우기 */
+
+  /* 배경 위치 */
+  background-position: center ;
+}
+
+/* ========================= 본문 ============================= */
+#content{  
+  display: flex; justify-content: space-between;
+}
+#sidebar{
+  width: 250px; /* 부모요소[1280px] 에서 자식요소들이 나눠서 설정*/
+}
+#sidebar > h3{
+  background-color: #0ca9a2; /* 크롬 개발자도구에서 색상 추출 */
+  color: white; font-size: 20px; padding: 15px;
+}
+#sidebar > p{ padding: 15px; line-height: 160%; } /* 안쪽여백 , 줄간격 */
+
+#sidebar > .searchInput{
+  width: 150px; height: 30px;
+  margin-left: 15px; padding: 10px;
+  border-radius: 10px; /* 둥근 모서리 */
+}
+#sidebar > .searchBtn{  margin-left: 10px; padding: 6px 10px; }
+
+#sidebar > h4{ 
+  border-top: solid 2px black; border-bottom: solid 1px #eeeeee;
+  padding: 15px; margin-top: 10px; font-size: 20px;
+}
+#sidebar > ul > li { 
+  padding: 10px 15px;
+}
+
+#mainContent{
+  width: 1000px; /* 부모요소[1280px] 에서 자식요소들이 나눠서 설정*/
+}
