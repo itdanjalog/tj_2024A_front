@@ -41,6 +41,7 @@
   position: relative;   상대위치  : 자신의 본래 위치로 부터 기준
   position: absolute;   절대위치  : 부모의 위치 기준( 가장 가까운 relative속성인 부모 )
   position: fixed;      고정위치  : 디바이스 화면에 위치 고정 
+  position: sticky;              : 디바이스 화면으로부터 벗어나갔을때 위치고정
 
   -속성위치
     top       : 윗변 기준에 + 아래로 - 위로
