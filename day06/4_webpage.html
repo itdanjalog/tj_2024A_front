@@ -31,13 +31,28 @@
 
       <ul id="mainMenu"> <!-- 본메뉴 -->
         <!-- 로고 구역 -->        
-        <div><a href="#"> <img src="img/logo.png" /> </a> </div>
-        
+        <div><a href="#"> <img class="logo" src="img/logo.png" /> </a> </div>
         <ul>  <!-- 메뉴 구역 -->
           <li> <a href="#">BEST</a></li>
-          <li> <a href="#">NEW~20%</a></li>
-          <li> <a href="#">MADE</a></li>
-          <li> <a href="#">BIG SIZE</a></li>
+          <li> <a href="#"><span class="new">NEW~20%</span></a></li>
+          <li> 
+            <a href="#">MADE</a>
+            <ul class="subMenu"> 
+              <li> <a href="#">티</a></li>
+              <li> <a href="#">셔츠</a></li>
+              <li> <a href="#">바지</a></li>
+              <li> <a href="#">아우터</a></li>
+            </ul>
+          </li>
+          <li> 
+            <a href="#">BIG SIZE</a>
+            <ul class="subMenu"> 
+              <li> <a href="#">티2</a></li>
+              <li> <a href="#">셔츠2</a></li>
+              <li> <a href="#">바지2</a></li>
+              <li> <a href="#">아우터2</a></li>
+            </ul>
+          </li>
           <li> <a href="#">TOP</a></li>
           <li> <a href="#">SHIRTS</a></li>
           <li> <a href="#">PANTS</a></li>
@@ -49,13 +64,15 @@
           <li> <a href="#">1+1</a></li>
         </ul>
         <!-- 검색 구역 -->
-        <div>
+        <div id="searchbox">
           <input />
           <img src="img/search_icon.png" />
         </div>
-
       </ul> <!-- 본메뉴 end -->
     </div> <!-- header end -->
+
+    <img id="mainImg" src="img/main_img.jpg"/>
+
     <div id="content"> </div>
     <div id="footer"> </div>
   </div>         <!-- 전체 레이아웃 end  -->
