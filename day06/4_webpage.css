@@ -69,3 +69,48 @@ a{ color: black; text-decoration: none; }
 
 /* ============== 3.메인 이미지  ===================== */
 #mainImg{ width: 100%; }
+
+/* ============== 4. 본문  ===================== */
+#content > .title{
+  margin-top: 50px;font-size: 17px; 
+  text-align: center; font-weight: bold;
+}
+#content > .comment{
+  font-size: 10px; text-align: center;
+  color: #999999; margin: 20px 0px;
+}
+/* items(1600) 한줄에 4개씩 이므로 나누기 4 하고 여백 조금 빼기 */
+#items > .item{ width: 380px; margin: 30px 0px; }
+#items > .item > .itemImg{ width: 100%; }
+#items .color > span{
+  width: 10px; height: 10px;
+  display: inline-block; /* 한줄 배치 하면서 사이즈 적용 가능 */
+  border: 1px solid #DBDBDB;
+}
+#items .colorReview{ 
+  display: flex; justify-content: space-between;
+  margin: 5px 0px;
+}
+#items .review{ color: #999999;}
+
+#items .itemName{ margin: 5px 0px; }
+#items .itemName > .size{ 
+  font-size: 10px; color: #999999; margin: 1px 0px;
+}
+#items .itemPrice{ position: relative; margin: 5px 0px; }
+#items .disc{ 
+  position: absolute; right: 0px; top: 0px; /* 오른쪽 상단 배치 */
+  font-size: 15px; color: red; font-weight: bold;
+}
+#items .price{ 
+  text-decoration: line-through;  /* 취소선 */
+  color: #999999; 
+} 
+
+
+
+
+
+
+
+
