@@ -27,7 +27,7 @@ a{ color: black; text-decoration: none; }
 }
 #mainMenu > ul{  display: flex;  width: 80%; }
 #mainMenu > ul > li{
-    height: 80px; width: 80px; /* .. */
+    height: 80px; width: 80px;
     display: flex; align-items: center; justify-content: center;
 }
 #searchbox{ border-bottom: 1px solid black;}
@@ -49,6 +49,23 @@ a{ color: black; text-decoration: none; }
 #mainMenu .subMenu > li{ margin:10px;}
 /* 본메뉴(li)에 hover(마우스를 올렸을때) 했을때 subMenu 보이도록 */
 #mainMenu > ul > li:hover .subMenu{ display: block;}
+
+/* ============== 2-3. 본메뉴 sticky  ===================== */
+#mainMenu{
+  position: sticky; /* 스크롤 내릴경우 위치 고정 */
+  top : 0px; /* 최상단 */
+  /*
+    sticky 사용조건 
+      1. sticky : 상위 부모의 높이 사이즈 안에서 고정 
+        vs fixed : 특정 요소와 상관없이 디바이스 고정 
+      2. top , right , left , bottom 위치 속성 1개이상 필수!
+      3. 부모요소가 overflow 속성 사용금지.
+  */
+
+  background-color: white;
+  /* 투명도  : 100%투명도없음 */
+  opacity: 80%; 
+}
 
 /* ============== 3.메인 이미지  ===================== */
 #mainImg{ width: 100%; }
