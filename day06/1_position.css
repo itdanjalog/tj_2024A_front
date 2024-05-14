@@ -1,0 +1,55 @@
+.box{
+  width: 100px; height: 100px;
+  background-color: yellow;  border: 1px solid red;
+}
+.box2{
+  background-color: red;
+  position: relative; /* position : relative 상대위치 : 본래 해당 구역의 위치부터 시작 */
+  /* 위치속성 : 위치기준( top , left , right , bottom ) */
+  top: 50px; left: 50px;
+}
+.box5{
+  background-color: brown;
+  position: absolute;  /* position : absolute 절대위치 : 부모 구역의 위치부터 시작 */
+  top:50px; left: 50px;
+}
+.box8{
+  background-color: bisque;
+  position: static;   /* position : static 정적위치(기본값) */
+  top:50px; left: 50px; 
+  /* position이 static 이면 위치 속성( top , left , right , bottom ) 사용불가 */
+}
+.box11{
+  background-color: blue;
+  position: fixed;  /* position : fixed 고정(디바이스=모니터)위치  */
+  bottom: 50px; right: 50px;
+  z-index: 2;
+}
+.parent{
+  background-color: wheat; padding: 10px;
+  position: relative;
+  z-index: 1;
+}
+.box14{
+  background-color: aqua;
+  position: absolute;     /* 가장 가까운 부모의 relative 기준점 */
+  top : 100px; right: 100px;
+  z-index: 3;
+}
+/*
+  position: static;     기본값    : 작성순서대로 배치 ( 속성위치 사용할수 없다 )
+  position: relative;   상대위치  : 자신의 본래 위치로 부터 기준
+  position: absolute;   절대위치  : 부모의 위치 기준( 가장 가까운 relative속성인 부모 )
+  position: fixed;      고정위치  : 디바이스 화면에 위치 고정 
+
+  -속성위치
+    top       : 윗변 기준에 + 아래로 - 위로
+    bottom    : 밑변 기준에 + 위로 -아래로
+    left      : 왼쪽변 기준에 + 오른쪽 -왼쪽 
+    right     : 오른쪽변 기준에 +왼쪽 -오른쪽
+  
+  -배치 우선순위번호 
+    z-index     : 높을수록 z축 순서 지정 
+      기본값 : 0 
+
+*/
