@@ -1,0 +1,48 @@
+a{
+  color: black;
+  text-decoration: none; 
+}
+
+/* 가상클래스 선택자 */
+a:hover{ color: orange; font-weight: bold; }
+a:active{ color: blue; }
+a:visited{ color: red; }
+/*
+  선택자:hover    : 해당 선택자에 마우스를 올렸을때.
+  선택자:active   : 해당 선택자에 마우스 왼쪽 클릭 했을때.
+  선택자:visited  : 해당 링크에 방문한 적이 있을때. ( 브라우저 방문 기록 남음)
+*/
+/* ================================================ */
+#header{ background-color: beige; }
+#header > ul { display: flex; justify-content: center; }
+#header > ul > li { 
+  list-style-type: none; padding: 20px;
+  position: relative;
+}
+#header .subMenu{
+  position: absolute;  top: 60px; 
+  padding: 0px; width: 100px;
+  background-color: beige;
+  display: none; /* 숨기기*/
+}
+/* li에 마우스를 올렸을때 서브메뉴가 보이도록 */
+#header > ul > li:hover .subMenu{
+  display: block; /* 보이게 */
+}
+/* ================================================ */
+#header2{ background-color: beige; }
+#header2 > ul { display: flex; justify-content: center; }
+#header2 > ul > li{
+  list-style-type: none; padding: 20px;
+}
+#header2{ position: relative; }
+#header2 .subMenu2{
+  position: absolute; top: 60px;
+  padding: 0px; width: 100%;
+  background-color: beige;
+  display: none;
+}
+#header2 > ul:hover .subMenu2{
+  display: block;
+}
+
