@@ -1,12 +1,36 @@
 /*
 
   연산자 : 연산시 사용되는 기호 
-  1. 산술연산자 
+  1. 산술연산자 : 결과물 => 연산 결과 
     + 더하기 - 빼기 * 곱하기 / 나누기 % 나머지 
       몫 : parseInt( ) : 정수 반환 함수
   
-  2. 연결연산자 
+  2. + 연결연산자 : 결과물 => 연결 결과
     - 피연산자에 문자 이면 연결 연산자로 적용 
+
+  3. 비교연산자 : 결과물 => true/false 
+    > 초과/크다     >= 이상/크거나같다
+    < 미만/작다     <= 이하/작거나같다
+    ==[값]같다      ===[값과타입]같다         10 == "10"      10 === "10"
+    !=같지않다      !==같지않다
+  
+  4. 관계연산자 : 비교연산자 2개이상일때
+    && 이면서 면서 이고 그리고 모두 and조건     초등학생이 사탕이면서 초콜릿 먹을거야
+        true && true => true
+        true && false => false 
+        10<=변수<=20  => 변수>=10 && 변수<=20
+
+    || 이거나 거나 하나라도 또는 or조건         초등학생이 사탕이거나 초콜릿 먹을거야
+        true || true => true 
+        true || false => true 
+    !   부정 반대 not조건                     초등학생이 사탕을 안먹을거야
+        !true => false 
+        !false => true 
+
+  5. 대입연산자
+    = 
+
+
 */
 console.log( 10 + 3 );  // 13 
 console.log( 10 - 3 );  // 7 
@@ -54,6 +78,46 @@ let 실수2 = prompt('실수2:');       // 2. 실수2 입력받고 변수에 저
 let 비율 = (실수1/실수2)*100;       // 3. 비율 계산
 console.log( `비율 : ${ 비율 }%` ); // 4. 출력 ( 1->100% 0.1->10% 0.001->1% 10->1000%)
 */
+
+// 3. 비교연산자
+console.log( 10 > 3 ); //  초과 true 
+console.log( 10 >= 3 ); // 이상 true    =>
+console.log( 10 < 3 ); // 미만 false 
+console.log( 10 <= 3 ); // 이하 false   =<
+console.log( 10 == 10 ); // 같다 true
+console.log( 10 === "10" ) // 강력비교 false
+console.log( 10 != 3 ); // 같지않다 true
+console.log( 10 !== 3 );  // 강력비교 true 
+
+// 4. 관계연산자 
+console.log( 10 > 3 && 20 > 10 ); // true && true => true 
+console.log( 10 > 3 && 20 > 30 ); // true && false => false 
+console.log( 10 > 3 || 20 > 10 ); // true || true => true 
+console.log( 10 > 3 || 20 > 30 ); // true || false => true 
+console.log( !(10 > 3) );         // !true => false 
+
+/*
+  문제4 : prompt 함수로 정수를 입력받아 홀수true / 짝수false 로 출력(console)하시오. 
+    예) 7 입력시 true 출력 
+  
+  문제5 : prompt 함수로 정수를 입력받아 7배수이면true / 아니면 false 로 출력(console)하시오. 
+    예) 15 입력시 false 출력 
+
+  문제6 : prompt 함수로 아이디 와 비밀번호를 입력받아 아이디 admin 이고 비밀번호가 1234 와 일치하면 true / 아니면 false 로 출력(console)하시오. 
+    예) admin , 1234 입력시 true 출력 
+  
+  문제7 : prompt 함수로 정수를 입력받아 홀수 이면서 7배수 이면 true 아니면 false 로 출력(console)하시오. 
+
+  문제8 : prompt 함수로 십만원 단위의 금액을 입력받아 지폐 개수 출력하시오.
+    예) 356789 입력시   십만원:3장 만원:5장 천원6장 출력
+
+
+
+
+
+*/
+
+
 
 
 
