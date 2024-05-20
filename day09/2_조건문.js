@@ -147,6 +147,7 @@ else{console.log(`로그인 실패`)};
     배열변수.includes(찾을데이터) : 만약에 찾을데이터가 배열내 존재하면 true 아니면 false 
     배열변수.indexOf( 찾을데이터 ) : 만약에 찾을데이터가 배열내 존재하면 인덱스번호 아니면 -1 
 */
+/*
 let fruitList = [ '바나나' , '사과' ];                // [ 조건 ] 두 개의 과일을 저장하고 있는 배열 선언 
 
 let fruit = prompt('과일명');                         // 1. 하나의 과일명을 입력받아 변수에 저장 
@@ -159,4 +160,71 @@ else{ fruitList.push( fruit); console.log( fruitList);}
 // + indexOf()
 if( fruitList.indexOf( fruit ) >= 0 ){ console.log( '이미 존재하는 과일입니다.');}
 else{ fruitList.push( fruit); console.log( fruitList);}
+*/
+// - (세빈) 8. 주민등록번호를 입력받아서 성별이 남자이면 색상변수에 'blue' 을 여자이면 'red' 을 대입 하고 색상변수 출력하시오.
+/*
+  - 문자열 : '' , " " , `` , prompt( )
+  - 주민등록번호 : 860420-123456;
+    - 8번째 자리가 성별 표현 1 또는 3 이면 남자 2 또는 4 이면 여자 
+    주민등록번호[7] == 1
+*/
+/*
+let number = prompt('주민등록번호');    // 1. 주민등록번호 입력받고 변수에 저장한다.
+let color = 'black';                         // 2. 색생변수 선언 
+// 3. 만약에 입력받은데이터의 8번째 자리의문자가 '1' 또는 '3' 이면 변수에 'blue' 대입 
+if( number[7] == 1 || number[7] ==3 ) { color = 'blue'}
+else if( number[7] == 2 || number[7] == 4 ){ color = 'red' }
+// 4. 
+console.log( color );
+// 5. 응용
+let html = `<h3 style='color : ${ color } '> 주민등록번호 : ${ number } </h3>`;
+  console.log( html );
+document.querySelector('#result1').innerHTML = html;
+*/
+/*
+  - (병찬) 9. 가위바위보 게임 
+    조건1 : 가위 0 , 바위 1 , 보 2 입니다. / 조건2 : 플레이어 2 명 입니다.
+  
+  - 경우의 수 판단하기 
+    1. p1승리( p1가위p2보 , p1바위p2가위 , p1보p2바위 ) 2. 무승부(p1가위p2가위,p1바위p2바위,p1보p2보)  3. p1패배(그외) 
+*/
+/*
+let p1 = prompt(' p1 가위[0] 바위[1] 보[2] : ');  // 1. 입력받아 변수에 저장한다.
+let p2 = prompt(' p2 가위[0] 바위[1] 보[2] : ');  // 1. 입력받아 변수에 저장한다.
+
+// 2. 풀이1 : 경우의 수 조건문 
+// 2-1 p1 승리했을때
+if( (p1 == 0 && p2 == 2) || ( p1 == 1 && p2 == 0) || ( p1 == 2 && p2 == 1 ) ){
+  console.log( 'p1 win');
+}
+// 2-2 무승부 했을떄
+else if( (p1 == 0 && p2 == 0) || ( p1 == 1 && p2 == 1) || ( p1 == 2 && p2 == 2 ) ){
+  console.log( 'draw'); 
+}
+// 2-3 p2 승리했을떄 
+else{
+  console.log( 'p2 win');
+}
+
+// 2.  풀이2 : 경우의 수 패턴 식 만들기 
+let answer = p1 == p2 ? 'draw' : p1 == (p2+1)%3 ? 'p1 win' : 'p2 win';
+console.log( (p2+1)%3 );  console.log( p1 == (p2+1)%3 );
+console.log( answer );
+*/
+//   - (성연) 10. 좌석 3개의 상태를 가지는 배열 선언하고 let sheetList = [ 'O' , 'X' , 'O' ]
+let sheetList = [ 'O' , 'X' , 'O' ];
+let sheetNum = prompt('좌석1 , 좌석2 , 좌석3 : '); //1. 좌석번호를 입력받고 저장한다.
+
+// 2. 만약에 배열에서 내가 선택한 좌석번호에 'O' 이면  
+if( sheetList[ sheetNum-1 ] == 'O' ){  // 2. 좌석번호는 1 , 2 , 3 / 인덱스 0 , 1 , 2 
+  console.log('예약불가');
+}else if( sheetList[sheetNum -1 ] == 'X'){
+  console.log('예약성공'); sheetList[sheetNum-1] = 'O'
+}
+
+
+
+
+
+
 
