@@ -45,9 +45,20 @@ for( let i = 1 ; i <= 6 ; i++ ){
 }
 
 // 5. 두 배열의 동일한 숫자가 몇개인지 체크
+let 일치수 = 0;
+  // - 0번 인덱스부터 마지막 인덱스까지 
+for( let i = 0 ; i<= 입력번호목록.length -1 ; i++ ){
+
+  // i번째 입력번호목록의 값이 추첨번호목록에 존재하면 
+  if( 추첨번호목록.indexOf( 입력번호목록[i] ) != -1 ){
+    일치수++; // 일치수 1 증가 
+  } // if end 
+
+} // for end 
 
 // 6. HTML 출력 
 document.querySelector('#입력번호목록').innerHTML = 입력번호목록;
 document.querySelector('#추첨번호목록').innerHTML = 추첨번호목록;
+document.querySelector('#일치수').innerHTML = 일치수;
 
 
