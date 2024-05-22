@@ -38,8 +38,8 @@ function 등록( ){    console.log( '등록()' );
 function 삭제(){  console.log( '삭제()');
   // 1. [입력] 
   let name = document.querySelector('#name').value;  console.log( name );
+  
   // 2. [처리]
-
   let deleteIndex = nameList.indexOf( name );   
   if( deleteIndex != -1){  nameList.splice( deleteIndex , 1 );}
   else{ alert('없는 회원 입니다.'); }
@@ -102,7 +102,7 @@ function 출력( ){
 
     4. 
       let deleteIndex = nameList.indexOf( name );   
-      if( deleteIndex != -1){  nameList.splice( deleteIndex , 1 );}
+      if( deleteIndex != -1){  nameList.splice( deleteIndex , 1 );  }
       else{ alert('없는 회원 입니다.'); }
 
     [ 제출 ] 
