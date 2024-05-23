@@ -117,7 +117,7 @@ function print(){// HTML 출력
     html += `<tr>
               <td> ${ currentdate } </td> <td> ${ currentName } </td>
               <td> ${ currentMoney.toLocaleString() } </td>
-              <td> <button>삭제</button> </td>
+              <td> <button onclick="remove( ${ i } )">삭제</button> </td>
             </tr>`
   }
 
@@ -132,3 +132,17 @@ function print(){// HTML 출력
 }
 
 // 삭제 : 인덱스를 이용한 삭제 구현 
+function remove( deleteIndex ){
+  // // - 삭제할 인덱스 
+  // let deleteIndex = 0
+
+  // 1. 배열내 특정 인덱스의 요소 삭제
+  dateList.splice( deleteIndex , 1 );
+  moneyList.splice( deleteIndex  , 1 );
+  nameList.splice( deleteIndex , 1 ); 
+
+  // 2. 삭제가 되면 배열의 상태가 변경 되므로
+  // 배열 상태를 다시 출력 - 화면 업데이트
+  print();
+
+}
