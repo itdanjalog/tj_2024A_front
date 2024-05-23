@@ -5,8 +5,17 @@
     2. 등록된 금액의 총합계를 하단에 출력 해주세요.
     3. 출력은 <table> 사용해주세요.   
 
-    + 
+    + 추가사항 요구사항 
+    1. 테이블에 항목 전체 내역을 아래와 같이 출력 해주세요.
+    날짜          항목      금액 
+    2024-05-23    콜라      1000
+    2024-05-24    커피      2500
 
+    2. 전체 내역에서 특정 항목 삭제하는 버튼 기능 구현 해주세요.
+    
+    3. 금액의 천단위 마다 ,(쉼표) 처리 해주세요. 
+         toLocaleString() 
+         변수.toLocaleString()
     ( 설계 )
     
     [ 백엔드 ]
@@ -72,28 +81,54 @@ function add(){
   alert('항목 저장 성공');
   
   // 4.
-  total();
-
+  // total();
+  print();
 }
 
 function total(){ 
   // [ 로직 순서 ] 1.배열에 있는걸 가져와서 다 더해준다. 2.총합계 보여준다. (재연)
-
   let sum = 0;  // 총합계 변수 
-
   // i부터 0부터 마지막 인덱스까지 = 배열을 순차적으로 순회(하나씩 금액 호출)
   for( let i = 0 ; i < moneyList.length ; i++ ){
     // 배열의 i번째 인덱스의 금액 호출
     sum += moneyList[i]; // 누적합계 : 배열내 금액의 총합계 계산중 
   } // for end 
+  // 호출 했던 곳으로 데이터 보내주기 = 반환 
+  return sum;
+} // f end 
 
-  // HTML 출력
+function print(){// HTML 출력
     // 1. 어디에 
   let moneyTable = document.querySelector('#moneyTable');
     // 2. 무엇을 
-  let html = `<tr><th>총합계</th><th>${ sum }</th></tr>` 
-  console.log( html );
-    // 3. 대입 
-  moneyTable.innerHTML = html;
+  let html = ``;
+  // 1. 테이블의 제목부분 
+  html += `<tr>
+            <th> 날짜 </th> <th> 항목 </th>
+            <th> 금액 </th> <th> 비고 </th>
+          </tr>`
+  // 2. 테이블의 내용 부분 : 항목 내역 들 = 배열내 전체 = 반복문
+  for( let i = 0 ; i < moneyList.length ; i++ ){
+    // 각 i번째 인덱스의 항목 정보를 각 호출 
+    let currentMoney = moneyList[i];
+    let currentName = nameList[i];
+    let currentdate = dateList[i]; 
+    
+    html += `<tr>
+              <td> ${ currentdate } </td> <td> ${ currentName } </td>
+              <td> ${ currentMoney.toLocaleString() } </td>
+              <td> <button>삭제</button> </td>
+            </tr>`
+  }
 
-} // f end 
+  // 3. 하단 부분 : 총합계 
+  html += `<tr>
+            <td colspan="2"> 합계 </td>
+            <td colspan="2"> ${ total().toLocaleString() } </td>
+          </tr>`
+
+    // 3. 대입 
+  moneyTable.innerHTML = html; console.log( html );
+}
+
+// 삭제 : 인덱스를 이용한 삭제 구현 
