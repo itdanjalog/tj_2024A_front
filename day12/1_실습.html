@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='1_실습.js'></script>
+
+  <style>
+    body > div{ display: flex;  }
+    body > div > div{
+      width: 50%;
+      border: 1px solid black;
+      padding: 50px;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    <div>
+      <h3> 회원가입 </h3>
+      아이디 : <input id="signupId" type="text" /> <br/>
+      비밀빈호 : <input id="signupPw" type="password" /> <br/>
+      <button onclick="signup()" type="button">회원가입</button>
+    </div>
+    <div>
+      <h3> 로그인 </h3>
+      아이디 : <input id="loginId" type="text" /> <br/>
+      비밀빈호 : <input id="loginPw" type="password" /> <br/>
+      <button onclick="login()" type="button">로그인</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -72,7 +72,3 @@ function 함수명( 매개변수 ){  console.log('함수실행'); return '반환
 function( 매개변수 ){ console.log('함수실행'); return '반환값'; }
 // 3. 화살표함수 정의 방법
 ( 매개변수 ) => { console.log('함수실행'); return '반환값'; }
-
-
-
-
