@@ -60,9 +60,8 @@
   let boardList = [ 
     "제목입니다,내용입니다,1234,2024-05-24,3" , 
     "두번째제목이야,또내용입니다,4567,2024-05-25,0" 
-  ]
-
-// 1. 
+  ];
+// 1. 등록함수 실행조건 : 1.등록버튼을 클릭했을때 
 function _create(){ 
   // 1-1 
   let title = document.querySelector('#titleInput').value;
@@ -84,17 +83,58 @@ function _create(){
   date = `${ currentYear }-${ currentMonth }-${ currentDay }` // 날짜 구성 
 
   let view = 0; // 처음 등록시 조회수는 0부터 시작
+
   // 3. ,쉼표 구분해서 하나의 문자열로 만들자. 
   let board = `${title},${content},${password},${date},${view}`; console.log( board );
   // 4. 배열 등록 
   boardList.push( board ); console.log( boardList ); 
-  // 5. 등록 성공 
-  alert('등록성공')
+  alert('등록성공') // 5. 등록 성공 
+  _allRead(); // 등록성공시 전체출력 함수 호출 
 }
-// 2. 
-function _allRead(){ }
-// 3. 
-function _read(){ }
+// 2. 전체출력 실행조건 : 1. 페이지가 열렸을때(HTML실행->JS실행) 2.데이터가 변화(수정/삭제/등록)가 있을때
+_allRead(); // js에서 해당 함수 1번 실행 
+function _allRead(){ 
+  // 1. 어디에 
+  let tableBody = document.querySelector('#tableBody');
+  // 2. 무엇을 
+  let html = '';
+  for( let i = 0 ; i<boardList.length ; i++ ){ // 배열 순회 : 0번 인덱스부터 마지막인덱스 까지
+    // i번째 게시물 반환 
+    let board = boardList[i]; console.log( board );
+    // 게시물의 정보 분류 : 특정 문자 기준으로 분류 .split( 기준문자 ) : 기준문자 기준으로 자른후 배열 반환
+    let boardArray = board.split(',') ; console.log( boardArray );
+    // ,쉼표 기준으로 각 분류된 배열의 정보 
+    console.log( boardArray[0] ); console.log( boardArray[3] ); console.log( boardArray[4] );  
+    // 각 정보를 HTML 문자열로 구성 
+    html += `<tr> 
+              <td> ${ i } </td> 
+              <td onclick="_read( ${ i } )"> ${ boardArray[0] } </td> 
+              <td> ${ boardArray[3] } </td>
+              <td> ${ boardArray[4] } </td>
+            </tr>`
+  }
+  // 3. 출력/대입 
+  tableBody.innerHTML = html;
+}
+// 3. 개별출력 실행조건 : 1.제목 클릭했을때
+function _read( index ){
+  // 선택/클릭 했을때 클릭된 해당 인덱스를 매개변수를 받아서 
+  let boardArray = boardList[ index ].split(','); // 해당 인덱스의 게시물 정보를 ,쉼표 기준으로 분류된 배열 반환 
+  // 1. 어디에 
+  let viewPage = document.querySelector('#viewPage');
+  // 2. 무엇을 
+  let html = `<h3> 상세 페이지 </h3>
+              <div> ${ boardArray[0] } </div>
+              <div> 
+                <span> 조회수 : ${ boardArray[4] } </span> 
+                <span> 작성일 : ${ boardArray[3] } </span>
+              </div>
+              <div> ${ boardArray[1] } </div>
+              <button>수정</button>
+              <button>삭제</button>`;
+  // 3. 출력/대입 
+  viewPage.innerHTML = html;
+}
 // 4.
 function _update(){ }
 // 5.

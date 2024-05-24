@@ -5,7 +5,28 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Page Title</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <script src='1_실습.js'></script>
+
+  <style>
+    body > div{
+      display: flex;
+    }
+    body > div > div {
+      width: 33%;
+    }
+    div{
+      padding: 10px;
+      border: 2px solid black;
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table th , table td{
+      border: 1px solid black;
+    } 
+
+  </style>
+
 </head>
 <body>
 
@@ -13,17 +34,32 @@
 
     <div> 
       <h3> 등록 페이지 </h3>
-      제목 : <input id="titleInput" type="text"/>
-      내용 : <textarea id="contentInput"></textarea>
-      비밀번호 : <input id="passwordInput" type="text" />
+      제목 : <input id="titleInput" type="text"/> <br/>
+      내용 : <textarea id="contentInput"></textarea> <br/>
+      비밀번호 : <input id="passwordInput" type="text" /> <br/>
       <button onclick="_create()"> 등록 </button>
     </div>
     
-    <div> </div>
+    <div>
+      <h3> 전체 페이지 </h3>
+      <table>
+        <thead>
+          <tr> <th> 번호/인덱스 </th> <th>제목[0]</th> <th>작성일[3]</th> <th>조회수[4]</tr>
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+      </table>
+    </div>
     
-    <div> </div>
+    <div id="viewPage">
+
+    </div>
 
   </div>
-  
+
+  <script src='1_실습.js'></script>
+
 </body>
 </html>
