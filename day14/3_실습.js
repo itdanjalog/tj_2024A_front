@@ -131,3 +131,37 @@ function findBoardIndex( 번호 ){
   // 만약에 못찾았다 -1 
   return findIndex;
 }
+
+// 4. 수정함수
+function _update( 번호 ){
+  
+  // 클릭한 게시물번호의 객체 인덱스번호 찾기
+  let findIndex = findBoardIndex( 번호 ); // 내가 선택한 게시물번호를 findBoardIndex 함수에 매개변수로 전달하면 찾은인덱스 반환,없으면-1
+  if( findIndex == -1 ) { return;}
+  
+  // 패스워드 검증 
+  if( _pwConfirm(findIndex) == false ) return;
+
+  // 입력 
+  let utitle = prompt('수정할제목');
+  let ucontent = prompt('수정할내용');
+  
+  // 찾은 인덱스의 객체 속성내 값 수정 
+  boardList[ findIndex ].제목 = utitle;
+  boardList[ findIndex ].내용 = ucontent;
+
+  // 페이지 새로고침 
+  _allRead();
+  _read( 번호 );
+
+} // for end 
+
+// 6. 패스워드 체크 함수 
+function _pwConfirm( index ){
+  let confirmPw = prompt('비밀번호:');
+  if( confirmPw != boardList[index].비밀번호 ){
+    alert('패스워드가 다릅니다. ');
+    return false ; 
+  }
+  return true; 
+}
