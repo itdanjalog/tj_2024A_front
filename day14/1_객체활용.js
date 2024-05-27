@@ -27,7 +27,7 @@ console.log( 영화API.boxOfficeResult.weeklyBoxOfficeList[1].movieNm ); // 2번
   // 객체[1] : { rank : 값 , movieNm : 값 }
 
 // 2. HTML 출력 함수 : 실행조건 :1.JS열렸을떄 : 어디에 무엇을 출력 판단하기 
-moviePrint(); // 함수 실행 : js가 실행될때 함수 1번 실행해주기.
+moviePrint()// 함수 실행 : js가 실행될때 함수 1번 실행해주기.
 function moviePrint(){ // 함수 정의/만들기 
   // 1. 어디에
   let 어디에 = document.querySelector('#tableBody')
@@ -52,7 +52,7 @@ function moviePrint(){ // 함수 정의/만들기
               </tr>`
     console.log( 무엇을 );
   }
-  
+
   // 3. 대입/출력 
   어디에.innerHTML = 무엇을;
 
