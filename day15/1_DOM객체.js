@@ -86,7 +86,7 @@ document.querySelector('img').src = '../짱구.jpg'
 console.log( document.querySelector('#box4').style);
 document.querySelector('#box4').style = `color:white;background-color:blue`;
   // 일부분 스타일 : css속성명을 작성할때 '-' 사용하면 안된다.
-    // - 카멜 표기법 : 낙타 등 모양처럼
+    // - 카멜 표기법 : 낙타 등 모양처럼 첫글자는 소문자 다음 글자부터는 첫글자를 대문자로 표기
     // carspeed -> carSpeed    , background-color -> backgroundColor 
 console.log( document.querySelector('#box4').style.backgroundColor );
 document.querySelector('#box4').style.backgroundColor = 'red';
