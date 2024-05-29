@@ -25,7 +25,8 @@ let month = currentDate.getMonth()+1;
 let contentList = [ 
   { content : '학원개강' , date : '2024-5-7' , color : 'blue' } ,
   { content : '은행업무' , date : '2024-5-10' , color : 'red' } ,
-  { content : '5월금토놀기' , date : '2024-5-31' , color : 'black' }
+  { content : '5월금토놀기' , date : '2024-5-31' , color : 'gray' } ,
+  { content : '신용카드발급' , date : '2024-5-7' , color : 'pink' } ,
 ]
 
 
@@ -56,17 +57,30 @@ function calPrint(){
     for( let b = 1 ; b <= startWeek ; b++ ){
       html += `<div></div>`
     }
+
+
     // * 1일부터 말일까지 일수 출력 반복문 
     for( let day = 1 ; day <= endDay ; day++ ){
+
       // * 현재 반복되고 있는 날짜의 형식(연도-월-일) 만들기
       let date3 = `${ year }-${month}-${day}`;  console.log( date3 );
+
+      let dayHtml = ``; // 일 마다의 일정 내용물 
+
       // * 일정목록에 date3 과 동일한 날짜가 있는지
-      for( let i = 0 ; i<contentList.length ; i++ ){
-        // console.log( contentList[i] );
-        console.log( contentList[i].date == date3 );
+      for( let i = 0 ; i<contentList.length ; i++ ){ // console.log( contentList[i] );console.log( contentList[i].date == date3 );
+        
+        if( contentList[i].date == date3 ){
+          dayHtml += `<div style="background-color : ${ contentList[i].color} "> 
+                        ${ contentList[i].content } 
+                      </div>`
+        }
       } // for2 end 
-      html += `<div>${ day }</div>`
+
+      html += `<div> ${ day } ${ dayHtml } </div>`; // 현재 day 출력 과 day와 일치한 일정날짜의 일정내용 출력 
+
     } // for1 end 
+    
   // 3. 출력 
   calendar.innerHTML = html;
 }
