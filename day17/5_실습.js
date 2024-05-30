@@ -33,7 +33,7 @@ function createImg( ){ console.log('createImg()');
     // 만약에 imgList의 요소가 30개 이상이면 종료 
   if( imgList.length > 30 ){ alert('실패'); clearImg(); }
 
-}
+} // 
 
 // 3. 이미지 제거함수 
 function removeImg( count ){ console.log('removeImg()'+count);
