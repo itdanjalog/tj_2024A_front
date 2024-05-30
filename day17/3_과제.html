@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <style>
+        body > div{
+            width: 100%;
+            display: block;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+        }
+        #todoBox >div{
+            width: 200px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex; 
+            justify-content: space-between;
+            border: 1px solid black;
+            margin: 20px auto;
+            width: 350px; height: 50px;
+            align-items: center;
+            padding-left: 10px;
+        }
+        #whiteBox{background-color: white; }
+        #blackBox{background-color: black;  }
+        button{ margin-right: 5px; }
+        #blackBox > span{ text-decoration: line-through; color: white;}
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h3> My to do List </h3>
+        <input id="todoInput" /> <button onclick="add()" type="button">등록</button>
+        <div id="todoBox">
+
+        </div>
+    </div>
+
+    <script src='3_과제.js'></script>
+
+</body>
+</html>
