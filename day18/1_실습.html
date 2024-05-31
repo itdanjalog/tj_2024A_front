@@ -22,7 +22,7 @@
           <button onclick="제품등록()" type="button" class="btn btn-info">제품등록</button>
         </form>
         <br/>
-        <button type="button" class="btn btn-danger">자동주문</button>
+        <button onclick="자동주문()" type="button" class="btn btn-danger">자동주문</button>
         <br />
         <table>
           <thead><tr><th>제품번호</th> <th>제품명</th> <th>가격</th></tr></thead>
@@ -33,7 +33,7 @@
         <h3> 주문현황(주문목록)</h3>
         <table class="table table-striped">
           <thead> <tr><th>주문번호</th> <th>제품명</th> <th>가격</th> <th>주문일</th></tr> </thead>
-          <tbody>
+          <tbody id="주문출력구역">
             <tr><td>1</td><td>코카콜라</td><td>1000</td><td>2024-05-30 17:00</td></tr>
             <tr><td>2</td><td>사이다</td><td>2500</td><td>2024-05-30 17:54</td></tr>
             <tr><td>3</td><td>아메리카노</td><td>1800</td><td>2024-05-30 17:39</td></tr>
