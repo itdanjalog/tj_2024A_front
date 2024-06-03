@@ -43,12 +43,22 @@
     
     <div id="main">
       <h3> 회원가입 </h3>
+      <form>
+        아이디 :          <input id="id" type="text"/> <br/>
+        비밀번호 :        <input id="pw"  type="password"/> <br/>
+        비밀번호 확인 :   <input id="pwconfirm"  type="password" /> <br/>
+        이름 :            <input id="name"  type="text" /> <br/>
+        연락처 :          <input id="phone"  type="text" /> <br/>
+        <button onclick="signup()" type="button">회원가입</button>
+      </form>
     </div>
      
   </div>
 
   <!-- 부트스트랩 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 회원가입 JS -->
+  <script src="signup.js"></script>
 
 </body>
 </html>
