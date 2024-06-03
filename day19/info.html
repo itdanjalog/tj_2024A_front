@@ -41,17 +41,16 @@
     </div>
     
     <div id="main">
-      <h3> 회원가입 </h3>
+      <h3> 내정보 </h3>
       <form>
-        아이디 :          <input id="id" type="text"/> <br/>
-        비밀번호 :        <input id="pw"  type="password"/> <br/>
-        비밀번호 확인 :   <input id="pwconfirm"  type="password" /> <br/>
-        이름 :            <input id="name"  type="text" /> <br/>
-        연락처 :          <input id="phone"  type="text" /> <br/>
-        <button onclick="signup()" type="button">회원가입</button>
+        회원번호 :        <div id="noBox"> </div>
+        아이디 :          <div id="idBox"> </div>
+        이름 :            <div id="nameBox"v> </div>
+        연락처 :          <div id="phoneBox"> </div>
+        <button onclick="_delete()" type="button">회원탈퇴</button>
+        <button onclick="update()" type="button">비밀번호수정</button>
       </form>
     </div>
-     
   </div>
 
   <!-- 부트스트랩 JS -->
@@ -59,7 +58,7 @@
   <!-- 공통 js -->
   <script src="index.js"></script>
   <!-- 회원가입 JS -->
-  <script src="signup.js"></script>
+  <script src="info.js"></script>
 
 </body>
 </html>
