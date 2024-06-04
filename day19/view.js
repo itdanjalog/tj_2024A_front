@@ -62,6 +62,46 @@ function board(){ console.log( 'board()');
   boardBox.innerHTML = html;
 }
 
+// 3. 삭제  : 삭제 버튼을 클릭했을때 
+// * 단 현재 로그인된 회원과 게시물의 작성자와 일치할 경우에만
+function _delete( ){ console.log("_delete()");
+
+  // 1. 누구를 : 현재 페이지의 게시물번호 = no
+  // 2. 해당 삭제할 게시물번호의 인덱스 찾기 
+  let findBoardIndex = -1;
+  for( let i = 0 ; i<boardList.length ;i++ ){
+    if( boardList[i].no == no ){ findBoardIndex = i; break; }
+  }
+
+  // ------------------------------------------------------- //
+    // 1. 로그인 상태 체크 
+  let loginNo = sessionStorage.getItem('loginNo');
+  if( loginNo == null ){ alert('작성자만 삭제가능합니다.'); return; }
+    // 2. 로그인된 회원아이디 와 게시물작성자 아이디 와 다르면 실패
+  let memberList = [];
+  memberList = JSON.parse( localStorage.getItem('memberList') ) ;
+  if( memberList == null ){ memberList = []; }
+
+  let writerCheck = false; // 현재 게시물을 보고 있는 회원이 해당 게시물의 작성자인지 여부를 저장하는 변수 
+  for( let i = 0 ; i < memberList.length ; i++ ){
+    if( memberList[i].no == loginNo 
+        && memberList[i].id == boardList[ findBoardIndex ].writer  ){
+        writerCheck = true;
+    }
+  }
+  if( writerCheck == false ){alert('작성자만 삭제가능합니다.'); return; }
+
+  // 삭제 
+  boardList.splice( findBoardIndex , 1 ); // JS배열내 객체 삭제 
+  // * localStorage 데이터 최신화 
+  localStorage.setItem( 'boardList' , JSON.stringify(boardList) );
+
+  alert('삭제 성공');
+  location.href="board.html";
+  return;
+
+}
+
 
 
 
