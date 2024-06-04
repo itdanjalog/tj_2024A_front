@@ -20,7 +20,7 @@ function boardPrint(){
   for( let i = 0 ; i < boardList.length ; i++  ){
     html += `<tr> 
               <th> ${ boardList[i].no }  </th> 
-              <th> ${ boardList[i].title }  </th> 
+              <th> <a href="view.html?no=${ boardList[i].no }"> ${ boardList[i].title } </a>  </th> 
               <th> ${ boardList[i].writer }  </th> 
               <th> ${ boardList[i].date }  </th> 
               <th> ${ boardList[i].view }  </th>  
