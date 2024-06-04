@@ -41,18 +41,18 @@
     </div>
     
     <div id="main">
-      <h3> 게시물 개별 출력 </h3>
+    
+      <h3> 게시물 수정 </h3>
+      <a href="board.html"> 목록보기 </a>
 
-      <a href="board.html">목록보기</a>
-
-      <div id="boardBox">
-
-      </div>
-
-      <button onclick="_delete()" type="button">삭제</button>
-      <button onclick="modify()"  type="button">수정</button>
-
+      <form>
+        <input id="title" type="text" class="form-control" />
+        <textarea id="content" rows="10" class="form-control"></textarea>
+        <button onclick="modify()" type="button"> 수정 </button>
+      </form>
+      
     </div>
+     
   </div>
 
   <!-- 부트스트랩 JS -->
@@ -60,7 +60,8 @@
 
   <!-- 공통 js -->
   <script src="index.js"></script>
-  <script src="view.js"></script>
+
+  <script src="modify.js"></script>
   
 </body>
 </html>

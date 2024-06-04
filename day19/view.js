@@ -73,23 +73,10 @@ function _delete( ){ console.log("_delete()");
     if( boardList[i].no == no ){ findBoardIndex = i; break; }
   }
 
-  // ------------------------------------------------------- //
-    // 1. 로그인 상태 체크 
-  let loginNo = sessionStorage.getItem('loginNo');
-  if( loginNo == null ){ alert('작성자만 삭제가능합니다.'); return; }
-    // 2. 로그인된 회원아이디 와 게시물작성자 아이디 와 다르면 실패
-  let memberList = [];
-  memberList = JSON.parse( localStorage.getItem('memberList') ) ;
-  if( memberList == null ){ memberList = []; }
-
-  let writerCheck = false; // 현재 게시물을 보고 있는 회원이 해당 게시물의 작성자인지 여부를 저장하는 변수 
-  for( let i = 0 ; i < memberList.length ; i++ ){
-    if( memberList[i].no == loginNo 
-        && memberList[i].id == boardList[ findBoardIndex ].writer  ){
-        writerCheck = true;
-    }
+  if( myBoardCheck(findBoardIndex) == false ){
+    alert('해당 게시물의 작성자만 삭제 가능합니다.');
+    return;
   }
-  if( writerCheck == false ){alert('작성자만 삭제가능합니다.'); return; }
 
   // 삭제 
   boardList.splice( findBoardIndex , 1 ); // JS배열내 객체 삭제 
@@ -102,7 +89,44 @@ function _delete( ){ console.log("_delete()");
 
 }
 
+// 4. 수정페이지로 이동함수  : 수정버튼 클릭시
+// - 로그인된회원 - 게시물작성자 일치 여부
+function modify(){
 
+  // 1. 누구를 : 현재 페이지의 게시물번호 = no
+  // 2. 해당 삭제할 게시물번호의 인덱스 찾기 
+  let findBoardIndex = -1;
+  for( let i = 0 ; i<boardList.length ;i++ ){
+    if( boardList[i].no == no ){ findBoardIndex = i; break; }
+  }
+  
+  if( myBoardCheck( findBoardIndex ) == false  ){
+    alert('해당 게시물의 작성자만 수정 가능합니다.');
+    return;
+  }
+
+  // - 무엇을 수정할껀지 매개변수 전달
+  location.href = `modify.html?no=${ no }`;
+}
+
+// 5. 현재 로그인된 회원의 글인지 유효성 함수 
+function myBoardCheck( findBoardIndex ){
+  // 1. 로그인 상태 체크 
+  let loginNo = sessionStorage.getItem('loginNo');
+  if( loginNo == null ){ return false; }
+    // 2. 로그인된 회원아이디 와 게시물작성자 아이디 와 다르면 실패
+  let memberList = [];
+  memberList = JSON.parse( localStorage.getItem('memberList') ) ;
+  if( memberList == null ){ memberList = []; }
+
+ for( let i = 0 ; i < memberList.length ; i++ ){
+    if( memberList[i].no == loginNo 
+        && memberList[i].id == boardList[ findBoardIndex ].writer  ){
+        return true;
+    }
+  }
+  return false;
+}
 
 
 
